@@ -3,7 +3,6 @@
 
 ## TO Do List : 
 
-- [ ] Server
-- [ ] Pug
-- [ ] Static
+- [ x ] Server
+- [x] Static
 - [ ] SocketIo
