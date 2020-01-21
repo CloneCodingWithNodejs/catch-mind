@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+@import 'variables';
+@import 'reset';
+@import 'login';
+@import 'notifications';
+@import 'chat';
+@import 'game';
+
+@font-face {
+  font-family: baemin;
+  src: url('/fonts/BMJUA_ttf.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button:focus {
+  outline: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: $greyColor;
+  font-family: 'baemin';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  .loginBox,
+  .gameContainer {
+    display: none;
+  }
+  &.loggedOut {
+    .loginBox {
+      display: block;
+    }
+  }
+  &.loggedIn {
+    .gameContainer {
+      display: flex;
+    }
+  }
+}

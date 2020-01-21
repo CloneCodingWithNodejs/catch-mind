@@ -1,8 +1,7 @@
 # catch-mind
 
+## TO Do List :
 
-## TO Do List : 
-
-- [ x ] Server
+- [x] Server
 - [x] Static
-- [ ] SocketIo
+- [x] SocketIo
