@@ -5,7 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev:server": "nodemon --exec babel-node src/server --ignore assets/ --ignore src/static",
-    "dev:assets": "gulp"
+    "dev:assets": "gulp",
+    "build:server": "babel src --out-dir build",
+    "build:assets": "gulp build",
+    "copyAll": "cp -R src/static build && cp -R src/views build",
+    "build": "npm run build:server && npm run build:assets && npm run copyAll",
+    "prebuild": "rm -rf build",
+    "start": "node build/server.js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +36,7 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-browserify": "^0.5.1",
     "gulp-csso": "^4.0.1",
+    "heroku": "^7.36.3",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2",
     "prettier-eslint-cli": "^5.0.0",
@@ -37,6 +44,7 @@
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.3",
     "babelify": "^10.0.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",

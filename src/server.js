@@ -27,5 +27,5 @@ const io = socketIO.listen(server);
 
 //  이벤트를 발생시킴
 io.on('connection', (socket) => {
-  socketController(socket);
+  socketController(socket, io);
 });

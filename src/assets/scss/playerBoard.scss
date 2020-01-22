@@ -1,0 +1,20 @@
+.player__board {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  span {
+    width: 100%;
+    min-width: 112px;
+    height: 100%;
+    font-weight: bold;
+    font-size: 13pt;
+    background-color: white;
+    grid-row: span 2;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px gray;
+    border-radius: 10px;
+  }
+}

@@ -5,6 +5,7 @@
 @import 'notifications';
 @import 'chat';
 @import 'game';
+@import 'playerBoard';
 
 @font-face {
   font-family: baemin;
@@ -30,6 +31,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100%;
+  min-width: 1000px;
   .loginBox,
   .gameContainer {
     display: none;
@@ -37,6 +39,9 @@ body {
   &.loggedOut {
     .loginBox {
       display: block;
+    }
+    .gameContainer {
+      display: none;
     }
   }
   &.loggedIn {

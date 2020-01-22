@@ -1,5 +1,6 @@
 .gameContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   width: 90%;
   margin: 0 auto;
   justify-content: center;
@@ -12,6 +13,7 @@
   }
   .main {
     margin-right: 200px;
+    grid-column: 2/3;
     #jsCanvas {
       width: 700px;
       height: 700px;
@@ -21,6 +23,36 @@
       display: flex;
       align-items: center;
       flex-direction: column;
+
+      .brushSize {
+        margin-bottom: 10px;
+        input {
+          &:hover {
+            opacity: 1;
+          }
+          margin-left: 28px;
+          -webkit-appearance: none;
+          width: 200px;
+          height: 5px;
+          padding: 0px;
+          background: #d3d3d3;
+          outline: none;
+          opacity: 0.5;
+          -webkit-transition: 0.5s;
+          transition: opacity 0.5s;
+        }
+
+        input::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 10px;
+          height: 25px;
+          background: white;
+          box-shadow: 1px 1px 1px gray;
+          cursor: pointer;
+        }
+      }
+
       .colors {
         margin: 20px;
         display: flex;
@@ -69,6 +101,7 @@
     }
   }
   .chat {
-    width: 18%;
+    grid-column: span 2;
+    min-width: 250px;
   }
 }

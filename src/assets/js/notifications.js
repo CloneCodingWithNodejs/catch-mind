@@ -1,7 +1,6 @@
 const body = document.querySelector('body');
 
 const fireNotification = (text, color) => {
-  console.log('fire');
   const notification = document.createElement('div');
   notification.innerText = text;
   notification.style.background = color;
