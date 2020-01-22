@@ -56,6 +56,6 @@ const clean = () => del(['src/static/js', 'src/static/styles']);
 const dev = gulp.series([clean, styles, js, watchFiles]);
 
 // 배포용
-export const build = gulp.series([clean, styles, js]);
+const build = gulp.series([clean, styles, js]);
 
-export default dev;
+export default build;
