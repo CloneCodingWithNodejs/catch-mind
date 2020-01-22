@@ -159,5 +159,5 @@ export const showControls = () => {
 };
 
 if (canvas) {
-  enableCanvas();
+  disableCanvas();
 }

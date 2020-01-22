@@ -31,7 +31,9 @@ const setNotifs = (text) => {
 const setSeconds = (second) => {
   seconds.innerText = second;
 };
-export const handlePlayerUpdate = ({ sockets }) => addPlayers(sockets);
+export const handlePlayerUpdate = ({ sockets }) => {
+  addPlayers(sockets);
+};
 export const handleGameStarted = () => {
   setNotifs('');
   setNotifs('게임 시작되었습니다. 그림을 보고 정답을 맞춰보세요');
@@ -40,6 +42,7 @@ export const handleGameStarted = () => {
   disableCanvas();
   // 캔버스 컨트롤창도 가림
   hideControls();
+  setSeconds(30);
 
   timer = setInterval(() => {
     setSeconds(Number(seconds.innerText) - 1);
