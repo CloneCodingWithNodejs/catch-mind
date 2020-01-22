@@ -7,7 +7,7 @@ import morgan from 'morgan';
 import globalRouter from './routers/globalRouter';
 import socketController from './controller/socketController';
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 const app = express();
 app.use(morgan('dev'));
 
@@ -21,7 +21,7 @@ const handleListening = () => {
   console.log('************** Server Statrted ^오^ ****************');
 };
 
-const server = app.listen(4000, handleListening);
+const server = app.listen(PORT, '0.0.0.0', handleListening);
 
 const io = socketIO.listen(server);
 
