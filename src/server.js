@@ -21,7 +21,7 @@ const handleListening = () => {
   console.log('************** Server Statrted ^오^ ****************');
 };
 
-const server = app.listen(PORT, handleListening);
+const server = app.listen(4000, handleListening);
 
 const io = socketIO.listen(server);
 

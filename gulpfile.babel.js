@@ -53,9 +53,9 @@ const watchFiles = () => {
 
 const clean = () => del(['src/static/js', 'src/static/styles']);
 
-const dev = gulp.series([clean, styles, js, watchFiles]);
+const dev = gulp.series([clean, styles, js]);
 
 // 배포용
 const build = gulp.series([clean, styles, js]);
 
-export default build;
+export default dev;
